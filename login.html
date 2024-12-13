@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script type="module" src="login.js"></script>
+</head>
+
+<body>
+    <div class="back"><a href="register.html">&lt;&lt; &nbsp;Back!</a></div>
+    <div class="login-container">
+        <h1>Login</h1>
+
+        <!-- Traditional Login Form -->
+        <div class="loginform">
+            <form id="login-form">
+                <label for="username">Username(Email)</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required class="form-control">
+                <div class="col-md-6">
+                    <i class="far fa-eye" id="togglePassword"></i>
+                </div>
+
+                <!-- Loading Message -->
+                <div id="loading-message" style="display: none; color: rgb(255, 255, 255); text-align: center; margin-top: 10px;">
+                    Authenticating...
+                </div>
+
+                <!-- Error Message -->
+                <div id="error-message" style="display: none; color: red; text-align: center; margin-top: 10px;">
+                </div>
+
+                <button type="submit" class="btn" name="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
